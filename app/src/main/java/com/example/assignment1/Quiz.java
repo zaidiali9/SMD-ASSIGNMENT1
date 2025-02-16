@@ -58,17 +58,16 @@ public class Quiz extends AppCompatActivity {
                 currentQuestionIndex++;
                 loadQuestion();
             } else {
-                // Last question, change button to "Submit"
-                nextButton.setText("Submit");
-                nextButton.setOnClickListener(v -> {
-                    checkAnswer();
-                    // Move to the result activity
-
-
-                    nextButton.setEnabled(false); // Disable the button when the quiz is over
-                });
+                // Move to the result activity directly, no need to change button behavior
+                Intent intent = new Intent(Quiz.this, Result.class);
+                intent.putExtra("name", username);
+                intent.putExtra("score", score);
+                intent.putExtra("total", questions.length);
+                startActivity(intent);
+                finish();
             }
         });
+
     }
 
     private void init() {
