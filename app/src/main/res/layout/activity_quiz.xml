@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/darker_gray"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Navigation (Previous Button and Question Number) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/previousButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:text="@string/previous"
+                android:textColor="@android:color/holo_green_dark"
+                android:textStyle="bold"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/questionNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                />
+        </LinearLayout>
+
+        <!-- Question Box -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:elevation="4dp"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">  <!-- Fixed card corner radius -->
+
+            <TextView
+                android:id="@+id/questionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="20dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Options -->
+        <RadioGroup
+            android:id="@+id/optionsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="60dp"
+            >
+
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="@drawable/radio_button_bg"
+                android:button="@null"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_button_bg"
+                android:button="@null"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp" />
+
+            <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_button_bg"
+                android:button="@null"
+                android:layout_marginBottom="10dp" />
+
+            <RadioButton
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_button_bg"
+                android:button="@null"
+                android:padding="16dp"
+                android:layout_marginBottom="10dp" />
+        </RadioGroup>
+
+        <!-- Next Button -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

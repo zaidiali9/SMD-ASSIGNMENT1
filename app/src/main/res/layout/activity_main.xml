@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/color"
+    tools:context=".MainActivity"
+    android:paddingHorizontal="10dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="75dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="60dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/quiz_app"
+        app:srcCompat="@drawable/logo"
+        android:background="@drawable/round_image"
+        />
+    </androidx.cardview.widget.CardView>
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_your_name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:background="@drawable/edittext_bg"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@android:color/white"
+
+        />
+</LinearLayout>
